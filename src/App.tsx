@@ -879,8 +879,6 @@ export default function App() {
                     </div>
                  </div>
               </div>
-              <div className="absolute right-0 top-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mr-20 -mt-20" />
-              <div className="absolute left-1/4 bottom-0 w-64 h-64 bg-blue-400/20 rounded-full blur-2xl" />
            </div>
         </section>
 
