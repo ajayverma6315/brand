@@ -861,22 +861,11 @@ export default function App() {
         <section className="px-6 py-10">
            <div className="max-w-7xl mx-auto bg-blue-600 rounded-[50px] p-10 lg:p-16 flex flex-col lg:flex-row items-center justify-between text-white relative overflow-hidden">
               <div className="relative z-10 lg:w-1/2">
-                 <div className="flex items-center gap-2 mb-4">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-[10px] font-black uppercase tracking-widest text-blue-200">Limited Time Offer</span>
-                 </div>
-                 <h2 className="text-4xl lg:text-5xl font-black leading-tight mb-8">Up to 40% Off <br /> On Selected Items</h2>
-                 <button onClick={() => setView('deals')} className="bg-white text-blue-600 px-10 py-4 rounded-2xl font-black text-xs uppercase tracking-widest shadow-xl hover:bg-gray-50 transition-all flex items-center gap-2 group">
-                    Shop Deals <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                 </button>
+                 <h2 className="text-5xl lg:text-7xl font-black leading-tight">20% Off</h2>
               </div>
               <div className="relative z-10 lg:w-1/2 flex justify-end mt-10 lg:mt-0">
                  <div className="relative cursor-pointer group" onClick={() => openProduct(PRODUCTS[1])}>
                     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Te61UHnbwPvnTk1u1tyb8ypfjr4uLh.png" className="w-[300px] drop-shadow-2xl group-hover:scale-105 transition-transform rounded-[6%]" alt="Fenton Watch" />
-                    <div className="absolute -top-10 -left-10 bg-white/20 backdrop-blur-md px-6 py-4 rounded-3xl border border-white/20">
-                       <p className="text-[9px] font-black uppercase tracking-widest mb-1">Starting from</p>
-                       <p className="text-2xl font-black">₹999</p>
-                    </div>
                  </div>
               </div>
            </div>
