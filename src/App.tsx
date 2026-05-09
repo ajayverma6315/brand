@@ -865,7 +865,7 @@ export default function App() {
               </div>
               <div className="relative z-10 lg:w-1/2 flex justify-end mt-10 lg:mt-0">
                  <div className="relative cursor-pointer group" onClick={() => openProduct(PRODUCTS[1])}>
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Te61UHnbwPvnTk1u1tyb8ypfjr4uLh.png" className="w-[300px] drop-shadow-2xl group-hover:scale-105 transition-transform rounded-[6%]" alt="Fenton Watch" />
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-flen6RQj8kq5CM3QmVPqIAxvvSl0tl.png" className="w-[280px] lg:w-[320px] drop-shadow-2xl group-hover:scale-105 transition-transform rounded-[20px] object-cover" alt="Fenton Watch" />
                  </div>
               </div>
            </div>
