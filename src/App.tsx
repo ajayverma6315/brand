@@ -382,7 +382,7 @@ export default function App() {
       <div className="min-h-screen bg-white font-sans text-gray-950 overflow-x-hidden pb-16 lg:pb-0 flex flex-col">
         {/* Top Banner */}
         <div className="hidden lg:block bg-[#0c0c0d] text-white text-[10px] sm:text-xs py-2.5 text-center tracking-widest font-black uppercase">
-          ⚡️ Free Shipping on all orders over $50 | 📦 30-Day Easy Returns | 🔒 Secure Payment
+          ⚡️ Free Shipping on all orders over ₹999 | 📦 30-Day Easy Returns | 🔒 Secure Payment
         </div>
 
         {/* Global Navigation */}
@@ -469,7 +469,7 @@ export default function App() {
     <div className="min-h-screen bg-white font-sans text-gray-950 overflow-x-hidden pb-16 lg:pb-0">
       {/* Top Banner */}
       <div className="hidden lg:block bg-[#0c0c0d] text-white text-[10px] sm:text-xs py-2.5 text-center tracking-widest font-black uppercase">
-        ⚡️ Free Shipping on all orders over $50 | 📦 30-Day Easy Returns | 🔒 Secure Payment
+        ⚡️ Free Shipping on all orders over ₹999 | 📦 30-Day Easy Returns | 🔒 Secure Payment
       </div>
 
       {/* Navigation */}
@@ -760,7 +760,7 @@ export default function App() {
             className="max-w-7xl mx-auto px-6 mt-20 grid grid-cols-2 md:grid-cols-4 gap-4"
           >
              {[
-               { icon: <Truck className="w-5 h-5 sm:w-6 sm:h-6" />, title: "Free Shipping", desc: "On orders over $50", color: "blue" },
+               { icon: <Truck className="w-5 h-5 sm:w-6 sm:h-6" />, title: "Free Shipping", desc: "On orders over ₹999", color: "blue" },
                { icon: <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6" />, title: "Secure Payment", desc: "100% secure checkout", color: "green" },
                { icon: <RotateCcw className="w-5 h-5 sm:w-6 sm:h-6" />, title: "Easy Returns", desc: "30-day return policy", color: "orange" },
                { icon: <HeadphonesIcon className="w-5 h-5 sm:w-6 sm:h-6" />, title: "24/7 Support", desc: "We're here to help", color: "purple" }
