@@ -872,7 +872,6 @@ export default function App() {
               </div>
               <div className="relative z-10 lg:w-1/2 flex justify-end mt-10 lg:mt-0">
                  <div className="relative cursor-pointer group" onClick={() => openProduct(PRODUCTS[1])}>
-                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=400" className="w-[300px] drop-shadow-2xl mix-blend-screen group-hover:scale-105 transition-transform" alt="Promo" />
                     <div className="absolute -top-10 -left-10 bg-white/20 backdrop-blur-md px-6 py-4 rounded-3xl border border-white/20">
                        <p className="text-[9px] font-black uppercase tracking-widest mb-1">Starting from</p>
                        <p className="text-2xl font-black">$19.99</p>
