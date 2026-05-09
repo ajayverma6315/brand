@@ -72,12 +72,12 @@ const PRODUCTS = [
   },
   {
     id: 2,
-    name: 'Smart Watch X1',
+    name: 'Fenton Classic Watch',
     price: 39.99,
     originalPrice: 69.99,
     rating: 4.5,
     reviews: 450,
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=400',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Mj8H3uReH1eseyxIL4UgCwz0I0oZQK.png',
     sale: false,
   },
   {
