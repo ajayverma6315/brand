@@ -72,12 +72,12 @@ const PRODUCTS = [
   },
   {
     id: 2,
-    name: 'Smart Watch X1',
+    name: 'Fenton Classic Watch',
     price: 39.99,
     originalPrice: 69.99,
     rating: 4.5,
     reviews: 450,
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=400',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Mj8H3uReH1eseyxIL4UgCwz0I0oZQK.png',
     sale: false,
   },
   {
@@ -382,7 +382,7 @@ export default function App() {
       <div className="min-h-screen bg-white font-sans text-gray-950 overflow-x-hidden pb-16 lg:pb-0 flex flex-col">
         {/* Top Banner */}
         <div className="hidden lg:block bg-[#0c0c0d] text-white text-[10px] sm:text-xs py-2.5 text-center tracking-widest font-black uppercase">
-          ⚡️ Free Shipping on all orders over $50 | 📦 30-Day Easy Returns | 🔒 Secure Payment
+          ⚡️ Free Shipping on all orders over ₹999 | 📦 30-Day Easy Returns | 🔒 Secure Payment
         </div>
 
         {/* Global Navigation */}
@@ -469,7 +469,7 @@ export default function App() {
     <div className="min-h-screen bg-white font-sans text-gray-950 overflow-x-hidden pb-16 lg:pb-0">
       {/* Top Banner */}
       <div className="hidden lg:block bg-[#0c0c0d] text-white text-[10px] sm:text-xs py-2.5 text-center tracking-widest font-black uppercase">
-        ⚡️ Free Shipping on all orders over $50 | 📦 30-Day Easy Returns | 🔒 Secure Payment
+        ⚡️ Free Shipping on all orders over ₹999 | 📦 30-Day Easy Returns | 🔒 Secure Payment
       </div>
 
       {/* Navigation */}
@@ -760,7 +760,7 @@ export default function App() {
             className="max-w-7xl mx-auto px-6 mt-20 grid grid-cols-2 md:grid-cols-4 gap-4"
           >
              {[
-               { icon: <Truck className="w-5 h-5 sm:w-6 sm:h-6" />, title: "Free Shipping", desc: "On orders over $50", color: "blue" },
+               { icon: <Truck className="w-5 h-5 sm:w-6 sm:h-6" />, title: "Free Shipping", desc: "On orders over ₹999", color: "blue" },
                { icon: <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6" />, title: "Secure Payment", desc: "100% secure checkout", color: "green" },
                { icon: <RotateCcw className="w-5 h-5 sm:w-6 sm:h-6" />, title: "Easy Returns", desc: "30-day return policy", color: "orange" },
                { icon: <HeadphonesIcon className="w-5 h-5 sm:w-6 sm:h-6" />, title: "24/7 Support", desc: "We're here to help", color: "purple" }
@@ -859,28 +859,64 @@ export default function App() {
 
         {/* Promo Banner */}
         <section className="px-6 py-10">
-           <div className="max-w-7xl mx-auto bg-blue-600 rounded-[50px] p-10 lg:p-16 flex flex-col lg:flex-row items-center justify-between text-white relative overflow-hidden">
+           <div className="max-w-7xl mx-auto bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 rounded-[50px] p-10 lg:p-16 flex flex-col lg:flex-row items-center justify-between text-white relative overflow-hidden">
+              {/* Background decorative elements */}
+              <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -mr-48 -mt-48" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-400/10 rounded-full blur-2xl -ml-32 -mb-32" />
+              
               <div className="relative z-10 lg:w-1/2">
-                 <div className="flex items-center gap-2 mb-4">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-[10px] font-black uppercase tracking-widest text-blue-200">Limited Time Offer</span>
+                 {/* Limited Time Badge */}
+                 <div className="inline-flex items-center gap-2 bg-red-500 px-4 py-2 rounded-full mb-6 animate-pulse">
+                    <span className="w-2 h-2 bg-white rounded-full animate-ping" />
+                    <span className="text-[10px] font-black uppercase tracking-widest">Limited Time Offer</span>
                  </div>
-                 <h2 className="text-4xl lg:text-5xl font-black leading-tight mb-8">Up to 40% Off <br /> On Selected Items</h2>
-                 <button onClick={() => setView('deals')} className="bg-white text-blue-600 px-10 py-4 rounded-2xl font-black text-xs uppercase tracking-widest shadow-xl hover:bg-gray-50 transition-all flex items-center gap-2 group">
-                    Shop Deals <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                 
+                 <h2 className="text-5xl lg:text-7xl font-black leading-tight mb-4">20% Off</h2>
+                 <p className="text-blue-200 text-sm lg:text-base font-medium mb-6 max-w-sm">Exclusive deal on premium Fenton watches. Offer ends soon!</p>
+                 
+                 {/* Countdown Timer */}
+                 <div className="flex gap-3 mb-8">
+                    <div className="bg-white/10 backdrop-blur-sm px-4 py-3 rounded-2xl text-center min-w-[70px]">
+                       <p className="text-2xl lg:text-3xl font-black">02</p>
+                       <p className="text-[9px] uppercase tracking-wider text-blue-200">Days</p>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-sm px-4 py-3 rounded-2xl text-center min-w-[70px]">
+                       <p className="text-2xl lg:text-3xl font-black">14</p>
+                       <p className="text-[9px] uppercase tracking-wider text-blue-200">Hours</p>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-sm px-4 py-3 rounded-2xl text-center min-w-[70px]">
+                       <p className="text-2xl lg:text-3xl font-black">38</p>
+                       <p className="text-[9px] uppercase tracking-wider text-blue-200">Mins</p>
+                    </div>
+                 </div>
+                 
+                 {/* Stock Warning */}
+                 <div className="flex items-center gap-3 mb-6">
+                    <div className="flex -space-x-2">
+                       <div className="w-8 h-8 bg-orange-400 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold">12</div>
+                    </div>
+                    <p className="text-sm text-orange-300 font-semibold">Only 12 left in stock!</p>
+                 </div>
+                 
+                 <button onClick={() => openProduct(PRODUCTS[1])} className="bg-white text-blue-600 px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-widest shadow-xl hover:bg-blue-50 hover:scale-105 transition-all flex items-center gap-2 group">
+                    Shop Now <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                  </button>
               </div>
+              
               <div className="relative z-10 lg:w-1/2 flex justify-end mt-10 lg:mt-0">
                  <div className="relative cursor-pointer group" onClick={() => openProduct(PRODUCTS[1])}>
-                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=400" className="w-[300px] drop-shadow-2xl mix-blend-screen group-hover:scale-105 transition-transform" alt="Promo" />
-                    <div className="absolute -top-10 -left-10 bg-white/20 backdrop-blur-md px-6 py-4 rounded-3xl border border-white/20">
-                       <p className="text-[9px] font-black uppercase tracking-widest mb-1">Starting from</p>
-                       <p className="text-2xl font-black">$19.99</p>
+                    {/* Sale Badge on Image */}
+                    <div className="absolute -top-4 -right-4 z-20 bg-red-500 text-white px-4 py-2 rounded-full font-black text-sm shadow-lg">
+                       -20%
+                    </div>
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-flen6RQj8kq5CM3QmVPqIAxvvSl0tl.png" className="w-[280px] lg:w-[350px] drop-shadow-2xl group-hover:scale-105 transition-transform rounded-[20px] object-cover" alt="Fenton Watch" />
+                    {/* Price Tag */}
+                    <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white text-gray-900 px-6 py-3 rounded-2xl shadow-xl">
+                       <span className="text-gray-400 line-through text-sm mr-2">₹1,249</span>
+                       <span className="text-xl font-black text-blue-600">₹999</span>
                     </div>
                  </div>
               </div>
-              <div className="absolute right-0 top-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mr-20 -mt-20" />
-              <div className="absolute left-1/4 bottom-0 w-64 h-64 bg-blue-400/20 rounded-full blur-2xl" />
            </div>
         </section>
 

@@ -35,12 +35,12 @@ const CATEGORY_LIST = [
 ];
 
 const TOP_CATEGORIES = [
-  { name: 'Trending', count: 85, image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=300' },
-  { name: 'Electronics', count: 342, image: 'https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&q=80&w=300' },
-  { name: 'Gadgets', count: 286, image: 'https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&q=80&w=300' },
-  { name: 'Accessories', count: 421, image: 'https://images.unsplash.com/photo-1619121820556-9d32d0891007?auto=format&fit=crop&q=80&w=300' },
-  { name: 'Smart Home', count: 128, image: 'https://images.unsplash.com/photo-1558002038-1037906d9927?auto=format&fit=crop&q=80&w=300' },
-  { name: 'Audio', count: 162, image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=300' },
+  { name: 'Electronics', count: 342, image: 'https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&q=80&w=300', bgColor: 'bg-[#9DC4C5]' },
+  { name: 'Gadgets', count: 286, image: 'https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&q=80&w=300', bgColor: 'bg-[#4A5568]' },
+  { name: 'Audio', count: 162, image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=300', bgColor: 'bg-[#D4A537]' },
+  { name: 'Accessories', count: 421, image: 'https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&q=80&w=300', bgColor: 'bg-[#8B6F5C]' },
+  { name: 'Smart Home', count: 128, image: 'https://images.unsplash.com/photo-1558002038-1037906d9927?auto=format&fit=crop&q=80&w=300', bgColor: 'bg-[#6B7280]' },
+  { name: 'Trending', count: 85, image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=300', bgColor: 'bg-[#3B82F6]' },
 ];
 
 const PRODUCTS = [
@@ -171,17 +171,21 @@ export default function CategoriesPage({
                <p className="text-sm text-gray-400 font-bold max-w-lg leading-relaxed">Explore our modular collection of high-performance gadgets designed for the glass age.</p>
             </header>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
                {TOP_CATEGORIES.map((cat, i) => (
-                  <div key={i} onClick={() => handleCategoryClick(cat.name)} className={`bg-white/40 backdrop-blur-xl rounded-[40px] p-5 border border-white shadow-sm hover:shadow-2xl hover:-translate-y-3 transition-all group flex flex-col items-center cursor-pointer ${cat.name === activeCategory ? 'ring-2 ring-blue-600 shadow-xl' : ''}`}>
-                     <div className="w-full aspect-square relative mb-6 rounded-[32px] overflow-hidden bg-white shadow-inner flex items-center justify-center p-4">
-                        <img src={cat.image} alt={cat.name} className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply" />
+                  <div 
+                    key={i} 
+                    onClick={() => handleCategoryClick(cat.name)} 
+                    className={`${cat.bgColor} rounded-[24px] p-6 hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 group cursor-pointer relative overflow-hidden aspect-square flex flex-col ${cat.name === activeCategory ? 'ring-4 ring-white/50 shadow-2xl' : ''}`}
+                  >
+                     <div className="flex-1 flex items-center justify-center p-4">
+                        <img 
+                          src={cat.image} 
+                          alt={cat.name} 
+                          className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-2xl" 
+                        />
                      </div>
-                     <h4 className="text-[11px] font-black uppercase mb-1 text-gray-950">{cat.name}</h4>
-                     <p className="text-[10px] font-bold text-gray-400 mb-6">{cat.count} Units</p>
-                     <div className={`w-10 h-10 rounded-2xl border transition-all shadow-sm flex items-center justify-center ${cat.name === activeCategory ? 'bg-blue-600 text-white border-blue-600' : 'bg-white border-gray-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white'}`}>
-                        <ChevronRight className="w-5 h-5" />
-                     </div>
+                     <h4 className="text-sm lg:text-base font-black uppercase tracking-wide text-white text-center mt-auto">{cat.name}</h4>
                   </div>
                ))}
             </div>
